@@ -119,8 +119,7 @@ android.minapi = 28
 #android.private_storage = True
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-android.ndk_path = /github/workspace/./.buildozer_global/android/platform/android-ndk-r25b
-
+android.ndk_path = 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 android.sdk_path = 
 
