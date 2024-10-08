@@ -28,6 +28,12 @@ jobs:
         with:
           path: .buildozer
           key: ${{ runner.os }}-${{ steps.get-date.outputs.date }}-${{ hashFiles('buildozer.spec') }}
+      - name: Verify buildozer.spec exists
+        run: |
+            if [ ! -f buildozer.spec ]; then
+              echo "buildozer.spec not found!"
+              exit 1
+            fi
 
       - name: Build with Buildozer
         uses: ArtemSBulgakov/buildozer-action@v1
